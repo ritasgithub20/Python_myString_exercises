@@ -1,0 +1,9 @@
+from collections import Counter
+
+def most_common_word(phrase):
+    words = phrase.lower().split()
+    word_count = Counter(words)
+    most_common = word_count.most_common(1)[0]
+    return most_common
+print("The most common word in the phrase is:", most_common[0])
+print("It occurs", most_common[1], "times.")
