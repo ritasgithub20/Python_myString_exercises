@@ -1,0 +1,11 @@
+from collections import Counter
+
+def most_frequent_letter(string):
+    string = string.replace(" ", "").lower()
+    letter_count = Counter(string)
+    most_common = letter_count.most_common(1)[0]
+    return most_common[0]
+
+string = input("My string is: ")
+most_frequent = most_frequent_letter(string)
+print("The most frequent letter in the string is: ", most_frequent)
